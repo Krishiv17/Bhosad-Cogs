@@ -1,0 +1,10 @@
+{
+	"author": [
+		"BhosadChacha"
+	],
+	"description": "Locks and Unlocks a channel for a particular role",
+    "install_msg": "Yeahhhh Boi , Thanks for installing meh",
+	"short": "Poop",
+	"type": "COG",
+	"end_user_data_statement": "This cog does not persistently store data or metadata about users."
+}
