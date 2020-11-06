@@ -1,7 +1,7 @@
 from redbot.core import commands
 
 
-class RoleUtils(commands.Cog):
+class BhosadUtils(commands.Cog):
     """My custom cog"""
 
     @commands.command()
