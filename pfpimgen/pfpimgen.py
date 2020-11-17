@@ -318,7 +318,7 @@ class PfpImgen(commands.Cog):
 
         # pasting the pfp
         member_avatar = member_avatar.rotate(angle=1, resample=Image.BILINEAR, expand=True)
-        im.paste(member_avatar, (73, 105))
+        im.paste(member_avatar, (640, 360))
         member_avatar.close()
 
         # pasting the card
