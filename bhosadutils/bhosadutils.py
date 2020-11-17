@@ -3,7 +3,10 @@ from redbot.core import commands
 
 class BhosadUtils(commands.Cog):
     """My custom cog"""
-
+    
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
     @commands.command()
     async def lock5(self, ctx):
         await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=False)
