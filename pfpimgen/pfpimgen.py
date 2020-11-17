@@ -313,7 +313,7 @@ class PfpImgen(commands.Cog):
     def gen_abesaale(self, ctx, member_avatar):
         member_avatar = self.bytes_to_image(member_avatar, 136)
         # base canvas
-        im = Image.new("RGBA", (500, 319), None)
+        im = Image.new("RGBA", (1280, 720), None)
         card = Image.open(f"{bundled_data_path(self)}/abesaale/abesaale.png", mode="r").convert("RGBA")
 
         # pasting the pfp
