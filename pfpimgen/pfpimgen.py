@@ -232,6 +232,29 @@ class PfpImgen(commands.Cog):
         image = image.resize((size, size), Image.ANTIALIAS)
         return image
 
+    def gen_abesaale(self, ctx, member_avatar):
+        member_avatar = self.bytes_to_image(member_avatar, 236)
+        # base canvas
+        im = Image.new("RGBA", (500, 319), None)
+        card = Image.open(f"{bundled_data_path(self)}/abesaale/abesaale.png", mode="r").convert("RGBA")
+
+        # pasting the pfp
+        member_avatar = member_avatar.rotate(angle=1, resample=Image.BILINEAR, expand=True)
+        im.paste(member_avatar, (70, 9))
+        member_avatar.close()
+
+        # pasting the card
+        im.paste(card, (0, 0), card)
+        card.close()
+
+        fp = BytesIO()
+        im.save(fp, "PNG")
+        fp.seek(0)
+        im.close()
+        _file = discord.File(fp, "abesaale.png")
+        fp.close()
+        return _file
+    
     def gen_neko(self, ctx, member_avatar):
         member_avatar = self.bytes_to_image(member_avatar, 156)
         # base canvas
@@ -307,29 +330,6 @@ class PfpImgen(commands.Cog):
         fp.seek(0)
         im.close()
         _file = discord.File(fp, "simp.png")
-        fp.close()
-        return _file
-    
-    def gen_abesaale(self, ctx, member_avatar):
-        member_avatar = self.bytes_to_image(member_avatar, 136)
-        # base canvas
-        im = Image.new("RGBA", (500, 319), None)
-        card = Image.open(f"{bundled_data_path(self)}/abesaale/abesaale.png", mode="r").convert("RGBA")
-
-        # pasting the pfp
-        member_avatar = member_avatar.rotate(angle=1, resample=Image.BILINEAR, expand=True)
-        im.paste(member_avatar, (70, 9))
-        member_avatar.close()
-
-        # pasting the card
-        im.paste(card, (0, 0), card)
-        card.close()
-
-        fp = BytesIO()
-        im.save(fp, "PNG")
-        fp.seek(0)
-        im.close()
-        _file = discord.File(fp, "abesaale.png")
         fp.close()
         return _file
 
