@@ -233,13 +233,12 @@ class PfpImgen(commands.Cog):
         return image
 
     def gen_abesaale(self, ctx, member_avatar):
-        member_avatar = self.bytes_to_image(member_avatar, 37)
+        member_avatar = self.bytes_to_image(member_avatar, 199)
         # base canvas
         im = Image.new("RGBA", (500, 319), None)
         card = Image.open(f"{bundled_data_path(self)}/abesaale/abesaale.png", mode="r").convert("RGBA")
 
         # pasting the pfp
-        member_avatar = member_avatar.rotate(angle=1, resample=Image.BILINEAR, expand=True)
         im.paste(member_avatar, (70, 9))
         member_avatar.close()
 
