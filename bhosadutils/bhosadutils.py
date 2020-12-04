@@ -9,7 +9,7 @@ class BhosadUtils(commands.Cog):
     @checks.admin_or_permissions(manage_roles=True)
     @commands.command()
     async def lock5(self, ctx):
-        await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=null)
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=None)
         """Locks Channel for Level 5"""
         await ctx.send("Locked channel for Level 5 Role")
     @commands.guild_only()
