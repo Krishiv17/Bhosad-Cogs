@@ -25,40 +25,80 @@ class BhosadUtils(commands.Cog):
     @checks.admin_or_permissions(manage_roles=True)
     @commands.command()
     async def lock10(self, ctx):
-        await ctx.channel.set_permissions(ctx.guild.get_role(722576157664608266), send_messages=False)
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576157664608266), send_messages=None)
         """Locks Channel for Level 10"""
-        await ctx.send("Locked channel for Level 10 Role")
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 10 Role")
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
+    @commands.command()
+    async def unlock10(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576157664608266), send_messages=True)
+        """Unlocks Channel for Level 10"""
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 10 Role")
     @commands.guild_only()
     @checks.bot_has_permissions(manage_roles=True)
     @checks.admin_or_permissions(manage_roles=True)
     @commands.command()
     async def lock15(self, ctx):
-        await ctx.channel.set_permissions(ctx.guild.get_role(722576225020674455), send_messages=False)
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576225020674455), send_messages=None)
         """Locks Channel for Level 15"""
-        await ctx.send("Locked channel for Level 15 Role")
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 15 Role")
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
+    @commands.command()
+    async def unlock15(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576225020674455), send_messages=True)
+        """Unlocks Channel for Level 15"""
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 15 Role")
     @commands.guild_only()
     @checks.bot_has_permissions(manage_roles=True)
     @checks.admin_or_permissions(manage_roles=True)
     @commands.command() 
     async def lock20(self, ctx):
-        await ctx.channel.set_permissions(ctx.guild.get_role(722576297003450368), send_messages=False)
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576297003450368), send_messages=None)
         """Locks Channel for Level 20"""
-        await ctx.send("Locked channel for Level 20 Role")
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 20 Role")
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
+    @commands.command() 
+    async def unlock20(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576297003450368), send_messages=True)
+        """Unlocks Channel for Level 20"""
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 20 Role")
     @commands.guild_only()
     @checks.bot_has_permissions(manage_roles=True)
     @checks.admin_or_permissions(manage_roles=True)
     @commands.command()
     async def lock30(self, ctx):
-        await ctx.channel.set_permissions(ctx.guild.get_role(730410382585495622), send_messages=False)
+        await ctx.channel.set_permissions(ctx.guild.get_role(730410382585495622), send_messages=None)
         """Locks Channel for Level 30"""
-        await ctx.send("Locked channel for Level 30 Role")
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 30 Role")
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
+    @commands.command()
+    async def unlock30(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(730410382585495622), send_messages=True)
+        """Unlocks Channel for Level 30"""
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 30 Role")
     @commands.guild_only()
     @checks.bot_has_permissions(manage_roles=True)
     @checks.admin_or_permissions(manage_roles=True)
     @commands.command()
     async def lock40(self, ctx):
-        await ctx.channel.set_permissions(ctx.guild.get_role(730410698932486195), send_messages=False)
+        await ctx.channel.set_permissions(ctx.guild.get_role(730410698932486195), send_messages=None)
         """Locks Channel for Level 40"""
-        await ctx.send("Locked channel for Level 40 Role")
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 40 Role")
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
+    @commands.command()
+    async def unlock40(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(730410698932486195), send_messages=True)
+        """Unlocks Channel for Level 40"""
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 40 Role")
 
 
