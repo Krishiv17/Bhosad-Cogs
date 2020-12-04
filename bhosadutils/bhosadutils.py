@@ -9,9 +9,17 @@ class BhosadUtils(commands.Cog):
     @checks.admin_or_permissions(manage_roles=True)
     @commands.command()
     async def lock5(self, ctx):
-        await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=False)
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=Null)
         """Locks Channel for Level 5"""
         await ctx.send("Locked channel for Level 5 Role")
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
+    @commands.command()
+    async def unlock5(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=True)
+        """Unlocks Channel for Level 5"""
+        await ctx.send("Unlocked channel for Level 5 Role")    
     @commands.guild_only()
     @checks.bot_has_permissions(manage_roles=True)
     @checks.admin_or_permissions(manage_roles=True)
