@@ -13,7 +13,7 @@ class BhosadUtils(commands.Cog):
         await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=True)
         """Unlocks Channel for Level 5"""
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 5 Role, Locking in 90 Seconds")
-        await asyncio.sleep(90)
+        await asyncio.sleep(85)
         await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=None)
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 5 Role")    
         
@@ -25,7 +25,7 @@ class BhosadUtils(commands.Cog):
         await ctx.channel.set_permissions(ctx.guild.get_role(722576157664608266), send_messages=True)
         """Unlocks Channel for Level 10"""
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 10 Role, Locking in 90 Seconds")
-        await asyncio.sleep(90)
+        await asyncio.sleep(85)
         await ctx.channel.set_permissions(ctx.guild.get_role(722576157664608266), send_messages=None)
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 10 Role")   
         
@@ -37,7 +37,7 @@ class BhosadUtils(commands.Cog):
         await ctx.channel.set_permissions(ctx.guild.get_role(722576225020674455), send_messages=True)
         """Unlocks Channel for Level 15"""
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 15 Role, Locking in 90 Seconds")
-        await asyncio.sleep(90)
+        await asyncio.sleep(85)
         await ctx.channel.set_permissions(ctx.guild.get_role(722576225020674455), send_messages=None)
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 10 Role")    
         
@@ -49,7 +49,7 @@ class BhosadUtils(commands.Cog):
         await ctx.channel.set_permissions(ctx.guild.get_role(722576297003450368), send_messages=True)
         """Unlocks Channel for Level 20"""
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 20 Role, Locking in 90 Seconds")
-        await asyncio.sleep(90)
+        await asyncio.sleep(85)
         await ctx.channel.set_permissions(ctx.guild.get_role(722576297003450368), send_messages=None)
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 20 Role") 
         
