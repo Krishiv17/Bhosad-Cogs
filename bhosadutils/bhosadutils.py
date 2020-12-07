@@ -52,6 +52,21 @@ class BhosadUtils(commands.Cog):
         await asyncio.sleep(85)
         await ctx.channel.set_permissions(ctx.guild.get_role(722576297003450368), send_messages=None)
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 20 Role") 
+    
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
+    @commands.command()
+    async def bunlock(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(688660550753714196), send_messages=True)
+        await ctx.channel.set_permissions(ctx.guild.get_role(730410382585495622), send_messages=True)
+        """Unlocks Channel for Boosters And Level 30"""
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Boosters And Level 30")
+        await asyncio.sleep(10)
+        await ctx.channel.set_permissions(ctx.guild.get_role(688660550753714196), send_messages=None)
+        await ctx.channel.set_permissions(ctx.guild.get_role(730410382585495622), send_messages=None)
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Locked Channel for Boosters and Level 30. Good Luck") 
+    
         
     
         
