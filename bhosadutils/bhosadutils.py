@@ -58,12 +58,14 @@ class BhosadUtils(commands.Cog):
     @checks.admin_or_permissions(manage_roles=True)
     @commands.command()
     async def bunlock(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(755391896838471690), send_messages=True)
         await ctx.channel.set_permissions(ctx.guild.get_role(688660550753714196), send_messages=True)
-        """Unlocks Channel for Boosters"""
-        await ctx.send("<a:nitro:785481730789474304> Unlocked channel for Boosters, Locking in 15 Seconds")
+        """Unlocks Channel for Boosters and Supporters"""
+        await ctx.send("<a:nitro:785481730789474304> Unlocked channel for Boosters and HIGH5 Followers, Locking in 15 Seconds")
         await asyncio.sleep(15)
+        await ctx.channel.set_permissions(ctx.guild.get_role(755391896838471690), send_messages=None)
         await ctx.channel.set_permissions(ctx.guild.get_role(688660550753714196), send_messages=None)
-        await ctx.send("<a:nitro:785481730789474304> Locked Channel for Boosters, Good Luck") 
+        await ctx.send("<a:nitro:785481730789474304> Locked Channel for Boosters and HIGH5 Followers, Good Luck") 
     
         
     
