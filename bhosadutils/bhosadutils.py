@@ -15,7 +15,19 @@ class BhosadUtils(commands.Cog):
         await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 5 Role, Locking in 90 Seconds")
         await asyncio.sleep(85)
         await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=None)
-        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 5 Role")    
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 5 Role")
+        
+    @commands.guild_only()
+    @checks.bot_has_permissions(manage_roles=True)
+    @checks.admin_or_permissions(manage_roles=True)
+    @commands.command()
+    async def lunlock5(self, ctx):
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=True)
+        """Unlocks Channel for Level 5"""
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Unlocked channel for Level 5 Role, Locking in 4 Minutes")
+        await asyncio.sleep(235)
+        await ctx.channel.set_permissions(ctx.guild.get_role(722576062869012521), send_messages=None)
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Locked channel for Level 5 Role") 
         
     @commands.guild_only()
     @checks.bot_has_permissions(manage_roles=True)
