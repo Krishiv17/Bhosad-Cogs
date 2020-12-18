@@ -77,7 +77,14 @@ class BhosadUtils(commands.Cog):
         await asyncio.sleep(15)
         await ctx.channel.set_permissions(ctx.guild.get_role(755391896838471690), send_messages=None)
         await ctx.channel.set_permissions(ctx.guild.get_role(688660550753714196), send_messages=None)
-        await ctx.send("<a:nitro:785481730789474304> Locked Channel for Boosters and HIGH5 Followers, Good Luck") 
+        await ctx.channel.set_permissions(ctx.guild.default_role, send_messages=None)
+        await ctx.send("<a:nitro:785481730789474304> Unlocked Channel For everyone, locking in about 3 minutes")
+        await asyncio.sleep(215)
+        await ctx.channel.set_permissions(ctx.guild.default_role, send_messages=False)
+        await ctx.send("<a:a_VerifiedBlue:784282245828575282> Channel is now Locked, Good Luck")
+        
+        
+        
     
         
     
